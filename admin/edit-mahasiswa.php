@@ -59,10 +59,13 @@ function ubah($data) {
 if (isset($_POST["edit"])) {
 
   if (ubah($_POST) > 0) {
-     echo "<script>
-        alert('Data Berhasil Di-Edit!');
-        window.location.href='mahasiswa.php';
-      </script>";
+    //  echo "<script>
+    //     alert('Data Berhasil Di-Edit!');
+    //     window.location.href='mahasiswa.php';
+    //   </script>";
+
+    // redirect to mahasiswa.php
+    header("Location: mahasiswa.php");
   } else {
     echo mysqli_error($conn);
   }
